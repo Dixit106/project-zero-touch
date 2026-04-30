@@ -1,0 +1,26 @@
+name: Auto Deploy to Homelab
+
+on:
+  push:
+    branches:
+      -main
+
+jobs:
+  deploy:
+  runs-on: self-hosted #this will tell github about my homeserver
+
+  steps:
+    - name: Get the leatest code
+    - uses: actions/checkout@v4
+
+    - name: Clean up the old website
+      run: |
+        docker stop mysite || true
+        docker rm mysite || true
+
+    - name: Build new Docker image
+      run: docker build -t mysite .
+
+    - name: Launch new website
+      run: docker run -d -p 80:80
+--name mysite mysite       
