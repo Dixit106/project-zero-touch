@@ -168,3 +168,5 @@ nextBtn.addEventListener('click', () => {
 bgAudio.addEventListener('ended', () => {
     nextBtn.click();
 });
+
+
