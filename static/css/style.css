@@ -1,0 +1,190 @@
+/* Space Vibe */
+body {
+    background: radial-gradient(circle at center bottom,#1f1c2c 0%, #0b0c10 80%);
+    background-attachment: fixed;
+    color: #c5c6c7;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    min-height: 100vh; 
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    z-index: -1;
+    background-image: 
+        radial-gradient(1.5px 1.5px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 80px 70px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 150px 160px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 250px 40px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1.5px 1.5px at 300px 120px, #ffffff, rgba(0,0,0,0));
+    background-repeat: repeat;
+    background-size: 350px 350px;
+    animation: twinkle 4s infinite alternate;
+}
+
+/* stars twinkle*/
+@keyframes twinkle {
+    0% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+header h1 {
+    color: #66fcf1;
+    text-shadow: 0 0 10px rgba(102, 252, 241, 0.5);
+}
+
+/* The Combining Area */
+#combining-pad {
+    margin: 40px auto;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+    max-width: 500px;
+}
+
+.slots {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.slot {
+    width: 110px;
+    height: 110px;
+    background: rgba(0,0,0,0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+#combine-btn {
+    background: linear-gradient(135deg,#6e8efb, #a777e3);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: transform 0.2, box-shadow 0.2s;
+}
+
+#combine-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(167, 199, 227, 0.4);
+}
+
+#result-message {
+    margin-top: 20px;
+    font-weight: bold;
+    min-height: 20px;
+}
+
+/* The Inventory Grid */
+.inventory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.element {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.element:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-4px);
+}
+
+.element .icon{
+    font-size: 28px;
+}
+
+.selected {
+    box-shadow: 0 0 15px #66fcf1;
+    border-color: #fff;
+}
+/*the goal tracker*/
+#goal-tracker {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 15px 30px;
+    margin: 0 auto 30px auto;
+    max-width: 500px;
+    box-shadow: 0 4px 15px rgba( 0, 0, 0, 0.3);
+    transition: 0.5s;
+}
+
+#goal-tracker h3 {
+    margin: 0 0 5px 0;
+    color: #a777e3;
+    text-shadow: 0 0 10px rgba(167, 199, 227, 0.5);
+}
+
+#goal-tracker p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#music-player {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+#music-player button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    padding: 0;
+}
+
+#music-player button:hover {
+    transform: scale(1.2);
+}
+
+#track-name {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    min-width: 60px;
+}

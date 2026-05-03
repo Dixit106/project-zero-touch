@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayTheGod</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Play The God</h1>
+        <p>Combine fundamental particles and other stuff to create you cosmos</p>
+    </header>
+
+    <div id="goal-tracker">
+        <h3>Mission: Create The Universe 🌌</h3>
+        <p id="goal-text">Discover Combinations to create things and Make Universe</p>
+    </div>
+    
+    <main class="game-container">
+        <section id="combining-pad">
+            <h2>Combining Pad</h2>
+            <div class="slots">
+                <div id="slot-1" class="slot">Select Item 1</div>
+                <div id="slot-2" class="slot">Select Item 2</div>
+            </div>
+            <button id="combine-btn">Collide</button>
+            <p id="result-message"></p>
+
+            <div id="hint-section" style="margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                <button id="hint-btn" style="background: transparent; color: #a777e3; border: 1px solid #a777e3; padding: 8px 20px; border-radius: 20px; cursor: pointer; transition: 0.3s;">Get a Hint</button>
+                <p id="hint-message" style="color: #c5c6c7; font-style: italic; font-size: 14px; margin-top: 15px; min-height: 20px;"></p>
+            </div>
+        </div>
+    </section>
+
+        <search id="inventory">
+            <h2>Known Particles</h2>
+            <div class="inventory-grid" id="elements-list">
+                <div class="element" data-name="Quark"><span class="icon">✨</span>Quark</div>
+                <div class="element" data-name="Electron"><span class="icon">⚡</span>Electron</div>
+                <div class="element" data-name="Photon"><span class="icon">☀️</span>Photon</div>
+                <div class="element" data-name="Nothing"><span class="icon">🕳️</span>Nothing</div>
+            </div>
+        </search>
+    </main>
+
+    <div id="music-player">
+        <span class="icon">🎵</span>
+        <span id="track-name">Track 1</span>
+        <button id="play-pause-btn">▶️</button>
+        <button id="next-btn">⏭️</button>
+    </div>
+
+<script src="../static/js/script.js"></script>
+</body>
+</html>
