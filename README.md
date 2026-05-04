@@ -49,4 +49,4 @@ Because the software is tied directly to physical hardware sitting in my room, d
 **Deployment**
 This project is heavily focused on hardware and networking infrastructure, so a permanent live demo link isn't practical. Instead, here is a video demonstration showing the physical hardware and the entire automated pipeline in action:
 
-Link: [Insert your YouTube link here]
+Link: [https://youtu.be/NTnkVOlnWc8]
