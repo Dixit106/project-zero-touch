@@ -43,6 +43,15 @@ Stack: Python & Flask, HTML, CSS, JS
 
 **Images**
 
+![Image1](/ss1.jpg)
+
+![Image1](/ss2.jpg)
+
+![Image1](/ss3.png)
+
+![Image1](/ss4.png)
+
+
 **How to Contribute**
 Because the software is tied directly to physical hardware sitting in my room, direct server contributions aren't possible. However, if you are into homelabbing or hardware infrastructure, I welcome recommendations and advice on how to improve this setup!
 
